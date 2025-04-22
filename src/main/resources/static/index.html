@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Login UI</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: rgb(130, 234, 226);
+			padding: 20px;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>Login Form</h2>
+	<form id="loginForm">
+		<div class="form-row">
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username" required />
+		</div><br/>
+
+		<div class="form-row">
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required />
+		</div>
+
+		<button type="submit" class="button">Login</button>
+	</form>
+
+	<p id="responseMessage"></p>
+
+	<script>
+		document.getElementById("loginForm").addEventListener("submit", function (event) {
+			event.preventDefault(); // Prevent form from refreshing the page
+
+			const username = document.getElementById("username").value;
+			const password = document.getElementById("password").value;
+
+			fetch("/api/auth/login", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify({username, password})
+			})
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById("responseMessage").textContent = data;
+				})
+				.catch(error => {
+					console.error("Error:", error);
+					document.getElementById("responseMessage").textContent = "An error occurred.";
+				});
+		});
+	</script>
+</body>
+
+</html>
