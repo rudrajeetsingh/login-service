@@ -20,7 +20,7 @@
 │                      (login-service)                          │
 │                                                               │
 │ ┌────────────────┐     ┌───────────────────────┐              │
-│ │  AuthController│────▶│   AuthService         │              │
+│ │  AuthController│────▶│   AuthService         │              |
 │ │  (REST API)    │     │  (Business Logic)     │              │
 │ └────────────────┘     └───────────────────────┘              │
 │           │                          │                        │
