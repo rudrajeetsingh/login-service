@@ -6,7 +6,7 @@
 
 ---
 name: doc-create
-description: Generates developer-friendly documentation
+description: I am software developer whogGenerates developer-friendly documentation
 ---
 
 # Instructions
