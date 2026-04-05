@@ -5,7 +5,7 @@
 # For format details, see: https://gh.io/customagents/config
 
 ---
-name: doc-writer
+name: doc-create
 description: Generates developer-friendly documentation
 ---
 
