@@ -47,6 +47,6 @@ You are an expert test engineer.
 
 ## Example Tasks You Handle
 
-- "Write unit tests for UserService"
+- "Write unit tests for all the classes in the java package com.example: service, controller, repository"
 - "Create integration test for Order API"
 - "Improve coverage for this class"
