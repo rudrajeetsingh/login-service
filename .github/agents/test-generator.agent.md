@@ -1,8 +1,7 @@
 ---
 name: test-generator
 description: Generates unit and integration tests for backend and frontend code
-tools:
-  - file_edit
+tools: []
 ---
 
 # Instructions
